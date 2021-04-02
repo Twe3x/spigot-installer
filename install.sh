@@ -1,6 +1,6 @@
 #!/bin/sh
 clear
-echo installling gti...
+echo installling git...
 sleep 2
 sudo apt install git screen -y
 
