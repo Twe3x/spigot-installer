@@ -37,7 +37,6 @@ else
 fi
 cd $dir/BuildTools/
 
-# Download latest BuildTools, ask for the Spigot version (default is latest), and run BuildTools.
 curl -z BuildTools.jar -o BuildTools.jar https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
 
 clear
