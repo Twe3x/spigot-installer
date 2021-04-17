@@ -26,7 +26,6 @@ fi
 
 cd $dir
 echo '#By changing the setting below to TRUE you are indicating your agreement to our EULA (https://account.mojang.com/documents/minecraft_eula).
-#Fri Apr 02 23:31:20 CEST 2021
 eula=true' >$dir/eula.txt
 
 if [ -e $dir/BuildTools/ ]
