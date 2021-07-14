@@ -2,13 +2,33 @@
 clear
 echo installling git...
 sleep 2
-sudo apt install git screen -y
+
+read -p "Do you want to use Tmux (1) or Screen (2): " session
+
+if [ session == 1 ] || [ session == "tmux" ]
+then
+       echo "Installing tmux..."
+       sleep 1
+       clear
+       sudo apt install tmux -y
+else 
+       echo "Installing Screen"
+       sleep 1
+       clear 
+       sudo apt install screen -y 
+fi
+
+clear
+
+sudo apt install git -y
 
 clear
 
 read -p "Enter the server name: " name
 
 dir=/home/Spigot/$name/
+
+
 
 if [ -e /home/Spigot/ ]
 then
@@ -48,6 +68,15 @@ rm -rf $dir/BuildTools/
 
 clear
 
-echo screen -dmS $name java -jar spigot-$version.jar >$dir/start.sh
+if [ session == "tmux" ] || [ session == 1 ]
+then 
+        echo tmux new -s $name "java -jar spigot-$version.jar" > $dir/start.sh
+else 
+        echo screen -dmS $name java -jar spigot-$version.jar > $dir/start.sh
+	
+
+fi 
+clear 
+chmod +x start.sh
 
 echo "Server was created successfully"
