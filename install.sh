@@ -71,7 +71,8 @@ echo screen -dmS $name java -jar spigot-$version.jar >$dir/start.sh
 
 chmod +x $dir/start.sh
 
-if [ -f $dir/spigot-$version.jar]
+exists="$(find $dir/ -name \*.jar)"
+if [ -z "$exists" ]
 then
 	clear
 	echo "${green}Server was created successfully.${nc}"
