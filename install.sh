@@ -73,6 +73,7 @@ chmod +x $dir/start.sh
 
 if [ -f spigot-$version.jar]
 then
+	clear
 	echo "${green}Server was created successfully.${nc}"
 else
 	rm -rf $dir/
