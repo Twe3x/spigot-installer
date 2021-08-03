@@ -1,7 +1,14 @@
-#!/bin/sh
+#!/usr/bin/env bash
+
+red="$(tput setaf 1)"
+yellow="$(tput setaf 3)"
+green="$(tput setaf 2)"
+nc="$(tput sgr0)"
+
 clear
-echo installling git...
+echo installing git...
 sleep 2
+sudo apt update -y
 sudo apt install git screen -y
 
 clear
@@ -50,4 +57,6 @@ clear
 
 echo screen -dmS $name java -jar spigot-$version.jar >$dir/start.sh
 
-echo "Server was created successfully"
+echo "${green}Server was created successfully${nc}"
+
+chmod +x $dir/start.sh
