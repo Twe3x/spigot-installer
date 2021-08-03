@@ -48,16 +48,16 @@ curl -z BuildTools.jar -o BuildTools.jar https://hub.spigotmc.org/jenkins/job/Bu
 clear
 
 
-echo 1.17    | 1.17.1
-echo 1.16.1  | 1.16.2  | 1.16.3  | 1.16.4  | 1.16.5
-echo 1.15    | 1.15.1  | 1.15.2
-echo 1.14    | 1.14.1  | 1.14.2  | 1.14.3  | 1.14.4 
-echo 1.13    | 1.13.1  | 1.13.2 
-echo 1.12    | 1.12.1  | 1.12.2
-echo 1.11    | 1.11.1  | 1.11.2
-echo 1.10.2
-echo 1.9     | 1.9.2   | 1.9.4
-echo 1.8     | 1.8.3   | 1.8.8
+echo "1.17    | 1.17.1"
+echo "1.16.1  | 1.16.2  | 1.16.3  | 1.16.4  | 1.16.5"
+echo "1.15    | 1.15.1  | 1.15.2"
+echo "1.14    | 1.14.1  | 1.14.2  | 1.14.3  | 1.14.4"
+echo "1.13    | 1.13.1  | 1.13.2"
+echo "1.12    | 1.12.1  | 1.12.2"
+echo "1.11    | 1.11.1  | 1.11.2"
+echo "1.10.2"
+echo "1.9     | 1.9.2   | 1.9.4"
+echo "1.8     | 1.8.3   | 1.8.8"
 
 read -p "Enter the version: " version
 java -jar BuildTools.jar --rev ${version:-latest}
