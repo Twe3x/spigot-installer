@@ -67,7 +67,7 @@ rm -rf $dir/BuildTools/
 
 clear
 
-echo screen -dmS $name java -jar spigot-$version.jar >$dir/start.sh
+echo screen -S $name java -jar spigot-$version.jar >$dir/start.sh
 
 chmod +x $dir/start.sh
 
